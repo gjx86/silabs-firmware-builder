@@ -103,7 +103,7 @@ jobs:
     needs: build-container
     strategy:
       matrix:
-        target: [zbdonglee, zb-gw04-1v2, mg24]
+        target: [zbdonglee, zb-gw04-1v2,mgm240p]
         baudrate: [115200, 230400, 460800]
         include:
           - components: cpc_security_secondary_none
@@ -122,10 +122,10 @@ jobs:
             components: cpc_security_secondary_none
             patchpath: "RCPMultiPAN/SkyConnect"
             baudrate: 460800
-          - target: mg24
+          - target: MGM240P
             device: EFR32MG24A110F1024IM48
             components: cpc_security_secondary_none
-            patchpath: "RCPMultiPAN/MG24"
+            patchpath: "RCPMultiPAN/MGM240P"
         exclude:
           - target: zb-gw04-1v2
             baudrate: 460800
@@ -166,7 +166,7 @@ jobs:
             components: bootloader_interface
             patchpath: "OpenThreadRCP/SkyConnect"
             baudrate: 460800
-          - target: mg24
+          - target: MGM240P
             device: EFR32MG24A110F1024IM48
             components: cpc_security_secondary_none
             patchpath: "OpenThreadRCP/MG24"
