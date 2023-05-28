@@ -169,7 +169,7 @@ jobs:
           - target: MGM240P
             device: EFR32MG24A110F1024IM48
             components: cpc_security_secondary_none
-            patchpath: "OpenThreadRCP/MG24"
+            patchpath: "OpenThreadRCP/MGM240P"
         exclude:
           - target: zb-gw04-1v2
             baudrate: 460800
@@ -207,7 +207,7 @@ jobs:
               cp $f $new
           done
 
-          targets="skyconnect yellow zb-gw04-1v1 zb-gw04-1v2 zbdonglee"
+          targets="skyconnect yellow zb-gw04-1v1 zb-gw04-1v2 zbdonglee mgm240p"
           for t in $targets; do
                   mkdir -p $t
                   find . -maxdepth 1 -type f -name "*$t*" -exec mv {} "$t" \;
