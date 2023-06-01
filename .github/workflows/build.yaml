@@ -72,11 +72,7 @@ jobs:
             device: EFR32MG21A020F512IM32
             patchpath: "EmberZNet/SkyConnect"
             baudrate: 115200
-          - target: mg24
-            device: EFR32MG24A110F1024IM48
-            patchpath: "EmberZNet/MG24"
-            baudrate: 115200
-         exclude:
+        exclude:
           - target: zbdonglee-none
             baudrate: 230400
     uses: ./.github/workflows/silabs-firmware-build.yaml
@@ -124,6 +120,7 @@ jobs:
             baudrate: 460800
           - target: MGM240P
             device: EFR32MG24A110F1024IM48
+            baudrate: 460800
             components: cpc_security_secondary_none
             patchpath: "RCPMultiPAN/MGM240P"
         exclude:
